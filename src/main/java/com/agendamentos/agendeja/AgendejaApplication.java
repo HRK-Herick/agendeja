@@ -7,7 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AgendejaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AgendejaApplication.class, args);
-	}
 
+        SpringApplication.run(AgendejaApplication.class, args);
+
+        System.out.println("Servidor respondendo da porta 1433");
+    }
 }
