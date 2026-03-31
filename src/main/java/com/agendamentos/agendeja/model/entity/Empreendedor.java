@@ -3,15 +3,15 @@ package com.agendamentos.agendeja.model.entity;
 import jakarta.persistence.Column;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @DiscriminatorValue("EMPREENDEDOR")
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Empreendedor extends Usuario{
 
     @Column(nullable = true, length = 250)
@@ -19,5 +19,6 @@ public class Empreendedor extends Usuario{
 
     @Column(nullable = true, length = 14)
     private String cnpj;
+
 
 }

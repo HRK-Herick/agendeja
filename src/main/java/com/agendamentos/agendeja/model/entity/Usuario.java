@@ -1,10 +1,7 @@
 package com.agendamentos.agendeja.model.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Table(name = "usuario")
@@ -14,6 +11,9 @@ import lombok.Setter;
 @Getter
 @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Usuario {
 
     @Id                         // PK
@@ -24,7 +24,7 @@ public class Usuario {
     @Column(nullable = true, length = 100)
     private String nome;
 
-    @Column(nullable = false, length = 8)
+    @Column(nullable = false, length = 15)
     private String telefone;
 
     @Column(nullable = true, length = 45)
